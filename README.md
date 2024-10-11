@@ -67,15 +67,6 @@ In addition to the SQL scripts and the interactive dashboard, the project includ
 + **CSS and Custom Styling:** The application's interface was enhanced with custom inline CSS and static application files, which included background styling and additional visual improvements.
 + **Drill-Down Functionality** Interactive reports were enhanced with drill-down functionality, allowing users to click through to more detailed information, such as room-specific data or patients in waiting lists.
 
-***
-
-# Documentation
-The full project report is available in the **Documentation**/ folder. This PDF includes:
-
-+ Detailed descriptions of the database design.
-+ Extended Entity Relationship Diagram (EERD).
-+ Oracle APEX dashboard and its various components.
-+ Screenshots of SQL queries and resulting charts.
 
 ***
 
