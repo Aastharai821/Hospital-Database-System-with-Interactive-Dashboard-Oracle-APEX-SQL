@@ -3,7 +3,7 @@ This project involves the design and implementation of a scalable hospital datab
 
 Due to the discontinuation of Oracle APEX access, this repository includes SQL scripts for creating the database, screenshots of the SQL code used for generating various reports, and visualizations from the dashboard.
 ***
-#Features
+# Features
 ## Hospital Database Design & Development:
 + **Requirement Analysis:** Conducted an in-depth study of the hospital’s operational needs, including patient management, doctor availability, ward/bed occupancy, and treatment tracking.
 + **Extended Entity Relationship Diagram (EERD):** Followed Gould's (2015) six-step database development lifecycle to create an Extended Entity Relationship Model (EERM) that models complex relationships with subclasses, superclasses, inheritance, and specialization.
@@ -12,7 +12,7 @@ Due to the discontinuation of Oracle APEX access, this repository includes SQL s
 + **Partitioning and Indexing:** Designed the physical database to improve query performance through partitioning and indexing. Tables were partitioned based on columns like `treatment_type`, and indexing was used to enhance retrieval efficiency.
 
 ***
-#Database Implementation with Oracle APEX:
+# Database Implementation with Oracle APEX:
 + **Master-Detail Pages:** Developed two master-detail pages—one for managing care centers, patients, and doctors, and another for tracking room availability and waiting lists. These pages provided real-time access to critical information for hospital administrators.
 + **Interactive Dashboard:** Designed an interactive dashboard that displays real-time insights into patient distribution, doctor availability, room occupancy, and care center rankings, enabling effective hospital management.
 + **Custom Reports and Charts:** Implemented various SQL-driven reports, including:
@@ -22,12 +22,12 @@ Due to the discontinuation of Oracle APEX access, this repository includes SQL s
     + **Patient Volume Ranking by Care Center:** A ranked list of care centers based on patient load.
     + **High-Bed Priority Patients:** A report highlighting patients in need of immediate care, based on bed priority.
 
-##Optimized System Performance: 
+## Optimized System Performance: 
 + **Performance Improvements:** Improved system performance by 20% through database partitioning and query optimization techniques. Cached smaller tables for faster joins and reduced the use of multiple OR operators in SQL queries to enhance performance.
 + **Dynamic Data Updates:** Used sequences to automatically generate primary keys and dynamic actions to update data across the system efficiently.
 
 ***
-#SQL Scripts
+# SQL Scripts
 The `hospital_database.sql` file in the `SQL/` folder contains the SQL scripts used to create and populate the main database tables. Out of the 29 tables designed in the Extended Entity Relationship Diagram (EERD), the following six tables were my responsibility, which form the core structure of the hospital's operational data:
 + **DOCTOR:** Stores detailed information about each doctor, including specialization and contact details.
 + **CARE_CENTRE:** Manages the information for different care centers, including their address, contact information, and patient capacity.
@@ -38,7 +38,7 @@ The `hospital_database.sql` file in the `SQL/` folder contains the SQL scripts u
 
 Other tables, such as `Salaried_emp`, `Shift`, and `Treatment`, were developed by other team members to complete the overall database system.
 
-##Highlights of the SQL file: 
+## Highlights of the SQL file: 
 + **Table Creation:** The script uses `CREATE TABLE` statements to define the structure of each table, with foreign key relationships linking entities such as patients, doctors, and care centers.
 + **Data Insertion:** `INSERT INTO` statements populate the tables with sample data for testing and demonstrating the hospital’s operations.
 + **Constraints and Integrity:** The database ensures referential integrity using foreign keys and constraints to maintain accurate relationships between entities.
@@ -47,7 +47,7 @@ Other tables, such as `Salaried_emp`, `Shift`, and `Treatment`, were developed b
 These SQL scripts can be executed in any SQL environment that supports relational database creation, such as Oracle SQL Developer.
 ```
 ***
-#Oracle APEX Back-end Logic
+# Oracle APEX Back-end Logic
 Since the live Oracle APEX application is no longer available, the screenshots in the **Screenshots**/ folder showcase the various SQL queries and charts generated in Oracle APEX:
 + **Patients by Gender per Care Center:** SQL query and bar chart that visualizes the number of male and female patients per care center.
 + **Doctor Availability:** SQL query to count available doctors by specialty, visualized using a bar chart.
@@ -55,7 +55,7 @@ Since the live Oracle APEX application is no longer available, the screenshots i
 + **Care Center Ranking by Patient Volume:** SQL query ranking care centers based on the number of patients.
 Each screenshot includes the SQL code used and the resulting visualizations from the Oracle APEX dashboard.
 
-#Additional Back-end Functionality
+# Additional Back-end Functionality
 In addition to the SQL scripts and the interactive dashboard, the project includes several important back-end features in Oracle APEX, which are documented through screenshots in the **Screenshots**/ folder:
 + **Primary Key Generation:** A dynamic action was created to automatically generate primary keys (e.g., `PATIENT_NO`) using PL/SQL sequences. The primary key field is hidden from the user interface to maintain data integrity.
 + **Input Validations:** Validations were implemented to ensure accurate data input, such as checking for valid contact numbers in the `PATIENT` table. Error messages are triggered if invalid phone numbers are entered, ensuring data consistency.
@@ -68,7 +68,7 @@ In addition to the SQL scripts and the interactive dashboard, the project includ
 
 ***
 
-#Documentation
+# Documentation
 The full project report is available in the **Documentation**/ folder. This PDF includes:
 
 + Detailed descriptions of the database design.
@@ -78,7 +78,7 @@ The full project report is available in the **Documentation**/ folder. This PDF 
 
 ***
 
-#Notes
+# Notes
 ```
 + The project was originally built in Oracle APEX, and the SQL scripts used to generate charts and reports are no longer accessible as live files, but screenshots are provided for reference.
 + For further details about the project, refer to the project report in the **Documentation**/ folder.
